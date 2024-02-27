@@ -30,8 +30,8 @@ public class Main {
         System.out.println(); // пустая строчка
 
         // Задача 5
-        for (int i = 1904; i <= 2096; i = i + 4) {
-            System.out.print(i + " ");
+        for (int year = 1904; year <= 2096; year = year + 4) {
+            System.out.print(year + " ");
         }
 
         System.out.println(); // пустая строчка
@@ -53,19 +53,19 @@ public class Main {
         // Задача 8
         int sum = 0;
         int monthlyAddition = 29000;
-        for (int i = 1; i <= 12; i++) {
+        for (int month = 1; month <= 12; month++) {
             sum = sum + monthlyAddition;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + sum + " рублей");
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + sum + " рублей");
         }
 
         System.out.println(); // пустая строчка
 
         // Задача 9
         double sumInBank = 0;
-        int monthlyAdditionInBank = 29000;
-        for (int i = 1; i <= 12; i++) {
-            sumInBank = (sumInBank + monthlyAdditionInBank) * 1.01;
-            System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей", i, sumInBank ); // были некрасивые доли копеек, пришлось погуглить
+        double interest = 1.01;
+        for (int month = 1; month <= 12; month++) {
+            sumInBank = (sumInBank + monthlyAddition) * interest;
+            System.out.printf("Месяц %d, сумма накоплений равна %.2f рублей", month, sumInBank ); // были некрасивые доли копеек, пришлось погуглить
             System.out.println();
         }
 
